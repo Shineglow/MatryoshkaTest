@@ -6,14 +6,16 @@ using CookingPrototype.Kitchen;
 using CookingPrototype.UI;
 
 using JetBrains.Annotations;
+using UnityEditor;
 
 namespace CookingPrototype.Controllers {
 	public sealed class GameplayController : MonoBehaviour {
 		public static GameplayController Instance { get; private set; }
 
-		public GameObject TapBlock   = null;
-		public WinWindow  WinWindow  = null;
-		public LoseWindow LoseWindow = null;
+		public GameObject  TapBlock    = null;
+		public WinWindow   WinWindow   = null;
+		public LoseWindow  LoseWindow  = null;
+		public GoalsWindow GoalsWindow = null;
 
 
 		int _ordersTarget = 0;
@@ -35,6 +37,7 @@ namespace CookingPrototype.Controllers {
 				Debug.LogError("Another instance of GameplayController already exists");
 			}
 			Instance = this;
+			Init();
 		}
 
 		void OnDestroy() {
@@ -45,8 +48,9 @@ namespace CookingPrototype.Controllers {
 
 		void Init() {
 			TotalOrdersServed = 0;
-			Time.timeScale = 1f;
 			TotalOrdersServedChanged?.Invoke();
+			Pause();
+			GoalsWindow.Show();
 		}
 
 		public void CheckGameFinish() {
@@ -69,6 +73,7 @@ namespace CookingPrototype.Controllers {
 			TapBlock?.SetActive(false);
 			WinWindow?.Hide();
 			LoseWindow?.Hide();
+			GoalsWindow?.Hide();
 		}
 
 		[UsedImplicitly]
@@ -91,6 +96,9 @@ namespace CookingPrototype.Controllers {
 			foreach ( var place in FindObjectsOfType<AbstractFoodPlace>() ) {
 				place.FreePlace();
 			}
+			
+			Pause();
+			GoalsWindow.Show();
 		}
 
 		public void CloseGame() {
@@ -99,6 +107,16 @@ namespace CookingPrototype.Controllers {
 #else
 			Application.Quit();
 #endif
+		}
+
+		public void Pause() {
+			TapBlock.SetActive(true);
+			Time.timeScale = 0f;
+		}
+		
+		public void Play() {
+			TapBlock.SetActive(false);
+			Time.timeScale = 1f;
 		}
 	}
 }
