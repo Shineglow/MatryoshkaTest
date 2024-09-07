@@ -22,13 +22,13 @@
     <order name="Cola">
         <food>Cola</food>
     </order>
-    <order name="Hotdog">
-        <food>HotdogBun</food>
-        <food needs="BurgerBun">Sosige</food>
+    <order name="HotDog">
+        <food>HotDogBun</food>
+        <food needs="HotDogBun">HotDogSausage</food>
     </order>
-    <order name="HotdogMustard">
-        <food>HotdogBun</food>
-        <food needs="BurgerBun">Sosige</food>
-        <food needs="BurgerCutlet">Mustard</food>
+    <order name="HotDogMustard">
+        <food>HotDogBun</food>
+        <food needs="HotDogBun">HotDogSausage</food>
+        <food needs="BurgerCutlet">HotDogMustard</food>
     </order>
 </root>
