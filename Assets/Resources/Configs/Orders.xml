@@ -29,6 +29,6 @@
     <order name="HotDogMustard">
         <food>HotDogBun</food>
         <food needs="HotDogBun">HotDogSausage</food>
-        <food needs="BurgerCutlet">HotDogMustard</food>
+        <food needs="HotDogSausage">HotDogMustard</food>
     </order>
 </root>
