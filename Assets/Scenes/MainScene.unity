@@ -1485,7 +1485,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac89d1488b7208d43b0e1553711b384a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Name: BurgerBun
+  Name: HotDogBun
   AuxObjects: []
 --- !u!114 &151512667
 MonoBehaviour:
@@ -1616,7 +1616,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac89d1488b7208d43b0e1553711b384a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Name: BurgerTomato
+  Name: HotDogMustard
   AuxObjects: []
 --- !u!114 &173021653
 MonoBehaviour:
@@ -1707,7 +1707,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac89d1488b7208d43b0e1553711b384a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Name: BurgerTomato
+  Name: HotDogMustard
   AuxObjects: []
 --- !u!114 &183005292
 MonoBehaviour:
@@ -2409,7 +2409,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac89d1488b7208d43b0e1553711b384a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Name: BurgerTomato
+  Name: HotDogMustard
   AuxObjects: []
 --- !u!114 &312937774
 MonoBehaviour:
@@ -3228,7 +3228,7 @@ MonoBehaviour:
   m_spriteAsset: {fileID: 0}
   m_tintAllSprites: 0
   m_StyleSheet: {fileID: 0}
-  m_TextStyleHashCode: 0
+  m_TextStyleHashCode: -1183493901
   m_overrideHtmlColors: 0
   m_faceColor:
     serializedVersion: 2
@@ -3240,9 +3240,9 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 80
   m_fontStyle: 1
-  m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
-  m_textAlignment: 514
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
   m_lineSpacing: 0
@@ -4607,7 +4607,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac89d1488b7208d43b0e1553711b384a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Name: BurgerCutlet
+  Name: HotDogSausage
   AuxObjects: []
 --- !u!114 &552892106
 MonoBehaviour:
@@ -4914,7 +4914,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac89d1488b7208d43b0e1553711b384a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Name: BurgerCutlet
+  Name: HotDogSausage
   AuxObjects: []
 --- !u!114 &577685200
 MonoBehaviour:
@@ -5005,7 +5005,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac89d1488b7208d43b0e1553711b384a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Name: BurgerCutlet
+  Name: HotDogSausage
   AuxObjects: []
 --- !u!114 &580282708
 MonoBehaviour:
@@ -5395,6 +5395,7 @@ RectTransform:
   - {fileID: 38370396}
   - {fileID: 762455307}
   - {fileID: 589401341}
+  - {fileID: 1204139341}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6131,7 +6132,7 @@ MonoBehaviour:
   m_spriteAsset: {fileID: 0}
   m_tintAllSprites: 0
   m_StyleSheet: {fileID: 0}
-  m_TextStyleHashCode: 0
+  m_TextStyleHashCode: -1183493901
   m_overrideHtmlColors: 0
   m_faceColor:
     serializedVersion: 2
@@ -6143,9 +6144,9 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 80
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
-  m_textAlignment: 514
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
   m_lineSpacing: 0
@@ -6803,7 +6804,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac89d1488b7208d43b0e1553711b384a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Name: BurgerCutlet
+  Name: HotDogSausage
   AuxObjects: []
 --- !u!114 &857992476
 MonoBehaviour:
@@ -7129,7 +7130,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60f468994a7bd7b408b3478c47698d7d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  FoodName: BurgerCutlet
+  FoodName: HotDogSausage
   Set:
     Empty: {fileID: 0}
     RawVisualizer: {fileID: 552892105}
@@ -7278,7 +7279,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac89d1488b7208d43b0e1553711b384a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Name: BurgerCheese
+  Name: HotDogBunTop
   AuxObjects: []
 --- !u!114 &932419364
 MonoBehaviour:
@@ -8061,7 +8062,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &990820550
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8079,7 +8080,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -344, y: 2}
+  m_AnchoredPosition: {x: -494, y: 2}
   m_SizeDelta: {x: 241, y: 258}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &990820551
@@ -8154,9 +8155,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   FoodName: HotDogMustard
   Places:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 1083280834}
+  - {fileID: 1551074512}
+  - {fileID: 1833673356}
 --- !u!114 &990820554
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8275,7 +8276,7 @@ MonoBehaviour:
   m_spriteAsset: {fileID: 0}
   m_tintAllSprites: 0
   m_StyleSheet: {fileID: 0}
-  m_TextStyleHashCode: 0
+  m_TextStyleHashCode: -1183493901
   m_overrideHtmlColors: 0
   m_faceColor:
     serializedVersion: 2
@@ -8287,9 +8288,9 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 80
   m_fontStyle: 1
-  m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
-  m_textAlignment: 514
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
   m_lineSpacing: 0
@@ -8381,9 +8382,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac89d1488b7208d43b0e1553711b384a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Name: BurgerCutlet
+  Name: HotDogSausage
   AuxObjects:
-  - {fileID: 0}
+  - {fileID: 1053607892}
 --- !u!114 &1000393431
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8666,7 +8667,7 @@ MonoBehaviour:
   m_spriteAsset: {fileID: 0}
   m_tintAllSprites: 0
   m_StyleSheet: {fileID: 0}
-  m_TextStyleHashCode: 0
+  m_TextStyleHashCode: -1183493901
   m_overrideHtmlColors: 0
   m_faceColor:
     serializedVersion: 2
@@ -8678,9 +8679,9 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 100
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
-  m_textAlignment: 514
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
   m_lineSpacing: 0
@@ -8772,7 +8773,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac89d1488b7208d43b0e1553711b384a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Name: BurgerCheese
+  Name: HotDogBunTop
   AuxObjects: []
 --- !u!114 &1053607895
 MonoBehaviour:
@@ -8910,7 +8911,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1073277957}
   - component: {fileID: 1073277958}
-  - component: {fileID: 1073277956}
   m_Layer: 0
   m_Name: TMP SubMeshUI [Fira_Sans SDF Material + LiberationSans SDF Atlas]
   m_TagString: Untagged
@@ -8918,34 +8918,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1073277956
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1073277955}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 058cba836c1846c3aa1c5fd2e28aea77, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_spriteAsset: {fileID: 0}
-  m_material: {fileID: 0}
-  m_sharedMaterial: {fileID: 0}
-  m_isDefaultMaterial: 0
-  m_padding: 1.25
-  m_TextComponent: {fileID: 1733584733}
-  m_materialReferenceIndex: 1
 --- !u!224 &1073277957
 RectTransform:
   m_ObjectHideFlags: 0
@@ -9101,7 +9073,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27d53ea68f9f6c24ba25b46383e2bbc4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Visualizer: {fileID: 0}
+  Visualizer: {fileID: 1633946381}
 --- !u!114 &1083280834
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9115,10 +9087,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Places:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 238993995}
+  - {fileID: 1329837307}
+  - {fileID: 617719854}
+  - {fileID: 1256567451}
   CurOrder: []
 --- !u!114 &1083280835
 MonoBehaviour:
@@ -9297,7 +9269,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac89d1488b7208d43b0e1553711b384a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Name: BurgerCutlet
+  Name: HotDogSausage
   AuxObjects: []
 --- !u!114 &1115773329
 MonoBehaviour:
@@ -9774,9 +9746,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac89d1488b7208d43b0e1553711b384a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Name: BurgerCutlet
+  Name: HotDogSausage
   AuxObjects:
-  - {fileID: 0}
+  - {fileID: 1794353596}
 --- !u!114 &1169653570
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10183,6 +10155,42 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1199191377}
   m_CullTransparentMesh: 0
+--- !u!1 &1204139340
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1204139341}
+  m_Layer: 0
+  m_Name: Menus
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1204139341
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1204139340}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 617874229}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &1224994296 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 224808028413197912, guid: b36dff65d271fc84bbf9818097c0ccb9,
@@ -10577,7 +10585,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac89d1488b7208d43b0e1553711b384a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Name: BurgerCutlet
+  Name: HotDogSausage
   AuxObjects: []
 --- !u!114 &1302112565
 MonoBehaviour:
@@ -10668,7 +10676,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac89d1488b7208d43b0e1553711b384a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Name: BurgerCutlet
+  Name: HotDogSausage
   AuxObjects: []
 --- !u!114 &1323150347
 MonoBehaviour:
@@ -11123,7 +11131,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5cb466b452d2f24789a843daa6cbff5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  FoodName: BurgerBun
+  FoodName: HotDogBun
   Places:
   - {fileID: 1083280834}
   - {fileID: 1551074512}
@@ -11514,7 +11522,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac89d1488b7208d43b0e1553711b384a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Name: BurgerCutlet
+  Name: HotDogSausage
   AuxObjects: []
 --- !u!114 &1428598020
 MonoBehaviour:
@@ -12267,7 +12275,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60f468994a7bd7b408b3478c47698d7d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  FoodName: BurgerCutlet
+  FoodName: HotDogSausage
   Set:
     Empty: {fileID: 0}
     RawVisualizer: {fileID: 1115773328}
@@ -12600,7 +12608,7 @@ MonoBehaviour:
   m_spriteAsset: {fileID: 0}
   m_tintAllSprites: 0
   m_StyleSheet: {fileID: 0}
-  m_TextStyleHashCode: 0
+  m_TextStyleHashCode: -1183493901
   m_overrideHtmlColors: 0
   m_faceColor:
     serializedVersion: 2
@@ -12612,9 +12620,9 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 80
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
-  m_textAlignment: 514
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
   m_lineSpacing: 0
@@ -12782,7 +12790,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27d53ea68f9f6c24ba25b46383e2bbc4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Visualizer: {fileID: 0}
+  Visualizer: {fileID: 602110984}
 --- !u!114 &1551074512
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12796,10 +12804,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Places:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 606209624}
+  - {fileID: 471419553}
+  - {fileID: 706370724}
+  - {fileID: 1420464017}
   CurOrder: []
 --- !u!114 &1551074513
 MonoBehaviour:
@@ -13615,7 +13623,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac89d1488b7208d43b0e1553711b384a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Name: BurgerCutlet
+  Name: HotDogSausage
   AuxObjects: []
 --- !u!114 &1707702964
 MonoBehaviour:
@@ -13904,7 +13912,7 @@ MonoBehaviour:
   m_spriteAsset: {fileID: 0}
   m_tintAllSprites: 0
   m_StyleSheet: {fileID: 0}
-  m_TextStyleHashCode: 0
+  m_TextStyleHashCode: -1183493901
   m_overrideHtmlColors: 0
   m_faceColor:
     serializedVersion: 2
@@ -13916,9 +13924,9 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 90
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
-  m_textAlignment: 514
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
   m_lineSpacing: 0
@@ -14387,7 +14395,7 @@ MonoBehaviour:
   m_spriteAsset: {fileID: 0}
   m_tintAllSprites: 0
   m_StyleSheet: {fileID: 0}
-  m_TextStyleHashCode: 0
+  m_TextStyleHashCode: -1183493901
   m_overrideHtmlColors: 0
   m_faceColor:
     serializedVersion: 2
@@ -14399,9 +14407,9 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 80
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
-  m_textAlignment: 514
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
   m_lineSpacing: 0
@@ -14545,7 +14553,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac89d1488b7208d43b0e1553711b384a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Name: BurgerCheese
+  Name: HotDogBunTop
   AuxObjects: []
 --- !u!114 &1794353599
 MonoBehaviour:
@@ -14676,7 +14684,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac89d1488b7208d43b0e1553711b384a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Name: BurgerBun
+  Name: HotDogBun
   AuxObjects: []
 --- !u!114 &1810895153
 MonoBehaviour:
@@ -15841,7 +15849,7 @@ MonoBehaviour:
   m_spriteAsset: {fileID: 0}
   m_tintAllSprites: 0
   m_StyleSheet: {fileID: 0}
-  m_TextStyleHashCode: 0
+  m_TextStyleHashCode: -1183493901
   m_overrideHtmlColors: 0
   m_faceColor:
     serializedVersion: 2
@@ -15853,9 +15861,9 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 80
   m_fontStyle: 1
-  m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
-  m_textAlignment: 514
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
   m_lineSpacing: 0
@@ -16067,9 +16075,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac89d1488b7208d43b0e1553711b384a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Name: BurgerCutlet
+  Name: HotDogSausage
   AuxObjects:
-  - {fileID: 0}
+  - {fileID: 932419361}
 --- !u!114 &1947425075
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16635,7 +16643,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac89d1488b7208d43b0e1553711b384a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Name: BurgerBun
+  Name: HotDogBun
   AuxObjects: []
 --- !u!114 &2067094721
 MonoBehaviour:
@@ -17116,7 +17124,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60f468994a7bd7b408b3478c47698d7d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  FoodName: BurgerCutlet
+  FoodName: HotDogSausage
   Set:
     Empty: {fileID: 0}
     RawVisualizer: {fileID: 580282707}
@@ -17203,7 +17211,7 @@ MonoBehaviour:
   m_spriteAsset: {fileID: 0}
   m_tintAllSprites: 0
   m_StyleSheet: {fileID: 0}
-  m_TextStyleHashCode: 0
+  m_TextStyleHashCode: -1183493901
   m_overrideHtmlColors: 0
   m_faceColor:
     serializedVersion: 2
@@ -17215,9 +17223,9 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 80
   m_fontStyle: 1
-  m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
-  m_textAlignment: 514
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
   m_lineSpacing: 0
