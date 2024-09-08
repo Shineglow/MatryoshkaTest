@@ -21,7 +21,6 @@ namespace EventSystem {
 		public void OnPointerUp() {
 			if ( IsTapRecently ) {
 				OnDoubleClick.Invoke();
-				Debug.Log($"Time from previous click: {_timeFromPreviousTap}");
 				_timeFromPreviousTap = 0;
 				StopCoroutine(timerRoutine);
 				timerRoutine = null;
@@ -41,7 +40,6 @@ namespace EventSystem {
 		private IEnumerator TimerRoutine() {
 			while ( true ) {
 				_timeFromPreviousTap += Time.deltaTime;
-				Debug.Log($"CurTime = {_timeFromPreviousTap}");
 				yield return null;
 			}
 		}
