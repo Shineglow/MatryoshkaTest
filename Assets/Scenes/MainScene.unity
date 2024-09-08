@@ -637,6 +637,8 @@ GameObject:
   - component: {fileID: 55610699}
   - component: {fileID: 55610703}
   - component: {fileID: 55610698}
+  - component: {fileID: 55610704}
+  - component: {fileID: 55610705}
   m_Layer: 0
   m_Name: Place1
   m_TagString: Untagged
@@ -653,7 +655,7 @@ RectTransform:
   m_GameObject: {fileID: 55610695}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.9, y: 0.9, z: 1}
+  m_LocalScale: {x: 0.90000004, y: 0.90000004, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 274995576}
@@ -663,7 +665,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 571, y: -230}
+  m_AnchoredPosition: {x: 570.99994, y: -230}
   m_SizeDelta: {x: 322, y: 256}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &55610697
@@ -698,9 +700,10 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 55610700}
-          m_TargetAssemblyTypeName: 
-          m_MethodName: TryTransferFood
+        - m_Target: {fileID: 55610705}
+          m_TargetAssemblyTypeName: CookingPrototype.Kitchen.FoodTransferPlacerSolver,
+            Assembly-CSharp
+          m_MethodName: OnPointerUp
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -710,9 +713,9 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-        - m_Target: {fileID: 55610703}
-          m_TargetAssemblyTypeName: 
-          m_MethodName: TryTrashFood
+        - m_Target: {fileID: 55610704}
+          m_TargetAssemblyTypeName: EventSystem.DoubleClickEvent, Assembly-CSharp
+          m_MethodName: OnPointerUp
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -818,6 +821,47 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e6ca951a252a3145841113e4b159a8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &55610704
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 55610695}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9339d493571c4ec5993f7ecf1c39a33a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _maxDeltaTimeToTriggerInSeconds: 0.3
+  OnDoubleClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 55610703}
+        m_TargetAssemblyTypeName: CookingPrototype.Kitchen.FoodTrasher, Assembly-CSharp
+        m_MethodName: TryTrashFood
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &55610705
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 55610695}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97e4db337fea49c487fb97edb4a9646d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _foodPlacer: {fileID: 2074393082}
 --- !u!1 &56667021
 GameObject:
   m_ObjectHideFlags: 0
@@ -2889,6 +2933,8 @@ GameObject:
   - component: {fileID: 428891240}
   - component: {fileID: 428891239}
   - component: {fileID: 428891238}
+  - component: {fileID: 428891244}
+  - component: {fileID: 428891245}
   m_Layer: 0
   m_Name: Place1
   m_TagString: Untagged
@@ -2905,7 +2951,7 @@ RectTransform:
   m_GameObject: {fileID: 428891235}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.9, y: 0.9, z: 1}
+  m_LocalScale: {x: 0.75, y: 0.75, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 897000690}
@@ -2915,7 +2961,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 501, y: -221}
+  m_AnchoredPosition: {x: 508, y: -223}
   m_SizeDelta: {x: 322, y: 256}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &428891237
@@ -2950,9 +2996,10 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 428891241}
-          m_TargetAssemblyTypeName: 
-          m_MethodName: TryTransferFood
+        - m_Target: {fileID: 428891245}
+          m_TargetAssemblyTypeName: CookingPrototype.Kitchen.FoodTransferPlacerSolver,
+            Assembly-CSharp
+          m_MethodName: OnPointerUp
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -2962,9 +3009,9 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-        - m_Target: {fileID: 428891239}
-          m_TargetAssemblyTypeName: 
-          m_MethodName: TryTrashFood
+        - m_Target: {fileID: 428891244}
+          m_TargetAssemblyTypeName: EventSystem.DoubleClickEvent, Assembly-CSharp
+          m_MethodName: OnPointerUp
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -3070,6 +3117,47 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 428891235}
   m_CullTransparentMesh: 0
+--- !u!114 &428891244
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 428891235}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9339d493571c4ec5993f7ecf1c39a33a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _maxDeltaTimeToTriggerInSeconds: 0.3
+  OnDoubleClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 428891239}
+        m_TargetAssemblyTypeName: CookingPrototype.Kitchen.FoodTrasher, Assembly-CSharp
+        m_MethodName: TryTrashFood
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &428891245
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 428891235}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97e4db337fea49c487fb97edb4a9646d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _foodPlacer: {fileID: 1376439837}
 --- !u!1 &437235967
 GameObject:
   m_ObjectHideFlags: 0
@@ -3718,6 +3806,8 @@ GameObject:
   - component: {fileID: 487657725}
   - component: {fileID: 487657724}
   - component: {fileID: 487657723}
+  - component: {fileID: 487657729}
+  - component: {fileID: 487657730}
   m_Layer: 0
   m_Name: Place0
   m_TagString: Untagged
@@ -3734,8 +3824,8 @@ RectTransform:
   m_GameObject: {fileID: 487657720}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.85, y: 0.85, z: 0.85}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 2109732076}
   - {fileID: 477372761}
@@ -3744,7 +3834,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 574, y: -376}
+  m_AnchoredPosition: {x: 592, y: -385}
   m_SizeDelta: {x: 322, y: 256}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &487657722
@@ -3779,9 +3869,10 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 487657726}
-          m_TargetAssemblyTypeName: 
-          m_MethodName: TryTransferFood
+        - m_Target: {fileID: 487657730}
+          m_TargetAssemblyTypeName: CookingPrototype.Kitchen.FoodTransferPlacerSolver,
+            Assembly-CSharp
+          m_MethodName: OnPointerUp
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -3791,9 +3882,9 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-        - m_Target: {fileID: 487657724}
-          m_TargetAssemblyTypeName: 
-          m_MethodName: TryTrashFood
+        - m_Target: {fileID: 487657729}
+          m_TargetAssemblyTypeName: EventSystem.DoubleClickEvent, Assembly-CSharp
+          m_MethodName: OnPointerUp
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -3899,6 +3990,47 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 487657720}
   m_CullTransparentMesh: 0
+--- !u!114 &487657729
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 487657720}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9339d493571c4ec5993f7ecf1c39a33a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _maxDeltaTimeToTriggerInSeconds: 0.3
+  OnDoubleClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 487657724}
+        m_TargetAssemblyTypeName: CookingPrototype.Kitchen.FoodTrasher, Assembly-CSharp
+        m_MethodName: TryTrashFood
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &487657730
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 487657720}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97e4db337fea49c487fb97edb4a9646d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _foodPlacer: {fileID: 1376439837}
 --- !u!1 &495082136 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1613687529247116, guid: b36dff65d271fc84bbf9818097c0ccb9,
@@ -4616,6 +4748,19 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
+        - m_Target: {fileID: 1258540811}
+          m_TargetAssemblyTypeName: CookingPrototype.Kitchen.FoodPlacer, Assembly-CSharp
+          m_MethodName: TryPlaceFoodAt
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 541366787}
+            m_ObjectArgumentAssemblyTypeName: CookingPrototype.Kitchen.AbstractFoodPlace,
+              Assembly-CSharp
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
         - m_Target: {fileID: 541366785}
           m_TargetAssemblyTypeName: 
           m_MethodName: TryServeOrder
@@ -5648,6 +5793,19 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
+        - m_Target: {fileID: 1258540811}
+          m_TargetAssemblyTypeName: CookingPrototype.Kitchen.FoodPlacer, Assembly-CSharp
+          m_MethodName: TryPlaceFoodAt
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 639950379}
+            m_ObjectArgumentAssemblyTypeName: CookingPrototype.Kitchen.AbstractFoodPlace,
+              Assembly-CSharp
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
         - m_Target: {fileID: 639950377}
           m_TargetAssemblyTypeName: 
           m_MethodName: TryServeOrder
@@ -6597,6 +6755,8 @@ GameObject:
   - component: {fileID: 748752195}
   - component: {fileID: 748752199}
   - component: {fileID: 748752194}
+  - component: {fileID: 748752200}
+  - component: {fileID: 748752201}
   m_Layer: 0
   m_Name: Place0
   m_TagString: Untagged
@@ -6658,9 +6818,10 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 748752196}
-          m_TargetAssemblyTypeName: 
-          m_MethodName: TryTransferFood
+        - m_Target: {fileID: 748752201}
+          m_TargetAssemblyTypeName: CookingPrototype.Kitchen.FoodTransferPlacerSolver,
+            Assembly-CSharp
+          m_MethodName: OnPointerUp
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -6670,9 +6831,9 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-        - m_Target: {fileID: 748752199}
-          m_TargetAssemblyTypeName: 
-          m_MethodName: TryTrashFood
+        - m_Target: {fileID: 748752200}
+          m_TargetAssemblyTypeName: EventSystem.DoubleClickEvent, Assembly-CSharp
+          m_MethodName: OnPointerUp
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -6778,6 +6939,47 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e6ca951a252a3145841113e4b159a8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &748752200
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 748752191}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9339d493571c4ec5993f7ecf1c39a33a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _maxDeltaTimeToTriggerInSeconds: 0.3
+  OnDoubleClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 748752199}
+        m_TargetAssemblyTypeName: CookingPrototype.Kitchen.FoodTrasher, Assembly-CSharp
+        m_MethodName: TryTrashFood
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &748752201
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 748752191}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97e4db337fea49c487fb97edb4a9646d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _foodPlacer: {fileID: 2074393082}
 --- !u!1 &762455306
 GameObject:
   m_ObjectHideFlags: 0
@@ -7791,6 +7993,19 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
+        - m_Target: {fileID: 1258540811}
+          m_TargetAssemblyTypeName: CookingPrototype.Kitchen.FoodPlacer, Assembly-CSharp
+          m_MethodName: TryPlaceFoodAt
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 949728618}
+            m_ObjectArgumentAssemblyTypeName: CookingPrototype.Kitchen.AbstractFoodPlace,
+              Assembly-CSharp
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
         - m_Target: {fileID: 949728616}
           m_TargetAssemblyTypeName: 
           m_MethodName: TryServeOrder
@@ -8515,7 +8730,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -494, y: 2}
+  m_AnchoredPosition: {x: -349.27, y: 2}
   m_SizeDelta: {x: 241, y: 258}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &990820551
@@ -9566,6 +9781,19 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
+        - m_Target: {fileID: 1352857442}
+          m_TargetAssemblyTypeName: CookingPrototype.Kitchen.FoodPlacer, Assembly-CSharp
+          m_MethodName: TryPlaceFoodAt
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 1083280834}
+            m_ObjectArgumentAssemblyTypeName: CookingPrototype.Kitchen.AbstractFoodPlace,
+              Assembly-CSharp
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
         - m_Target: {fileID: 1083280832}
           m_TargetAssemblyTypeName: 
           m_MethodName: TryServeOrder
@@ -12698,7 +12926,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CustomersTargetNumber: 15
-  CustomerWaitTime: 15
+  CustomerWaitTime: 18
   CustomerSpawnTime: 3
   CustomerPlaces:
   - {fileID: 1683130145}
@@ -13283,6 +13511,19 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
+        - m_Target: {fileID: 1352857442}
+          m_TargetAssemblyTypeName: CookingPrototype.Kitchen.FoodPlacer, Assembly-CSharp
+          m_MethodName: TryPlaceFoodAt
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 1551074512}
+            m_ObjectArgumentAssemblyTypeName: CookingPrototype.Kitchen.AbstractFoodPlace,
+              Assembly-CSharp
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
         - m_Target: {fileID: 1551074510}
           m_TargetAssemblyTypeName: 
           m_MethodName: TryServeOrder
@@ -15559,6 +15800,19 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
+        - m_Target: {fileID: 1352857442}
+          m_TargetAssemblyTypeName: CookingPrototype.Kitchen.FoodPlacer, Assembly-CSharp
+          m_MethodName: TryPlaceFoodAt
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 1833673356}
+            m_ObjectArgumentAssemblyTypeName: CookingPrototype.Kitchen.AbstractFoodPlace,
+              Assembly-CSharp
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
         - m_Target: {fileID: 1833673354}
           m_TargetAssemblyTypeName: 
           m_MethodName: TryServeOrder
@@ -15697,6 +15951,8 @@ GameObject:
   - component: {fileID: 1836333825}
   - component: {fileID: 1836333829}
   - component: {fileID: 1836333824}
+  - component: {fileID: 1836333830}
+  - component: {fileID: 1836333831}
   m_Layer: 0
   m_Name: Place2
   m_TagString: Untagged
@@ -15758,9 +16014,10 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1836333826}
-          m_TargetAssemblyTypeName: 
-          m_MethodName: TryTransferFood
+        - m_Target: {fileID: 1836333831}
+          m_TargetAssemblyTypeName: CookingPrototype.Kitchen.FoodTransferPlacerSolver,
+            Assembly-CSharp
+          m_MethodName: OnPointerUp
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -15770,9 +16027,9 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-        - m_Target: {fileID: 1836333829}
-          m_TargetAssemblyTypeName: 
-          m_MethodName: TryTrashFood
+        - m_Target: {fileID: 1836333830}
+          m_TargetAssemblyTypeName: EventSystem.DoubleClickEvent, Assembly-CSharp
+          m_MethodName: OnPointerUp
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -15878,6 +16135,47 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e6ca951a252a3145841113e4b159a8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1836333830
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1836333821}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9339d493571c4ec5993f7ecf1c39a33a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _maxDeltaTimeToTriggerInSeconds: 0.3
+  OnDoubleClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1836333829}
+        m_TargetAssemblyTypeName: CookingPrototype.Kitchen.FoodTrasher, Assembly-CSharp
+        m_MethodName: TryTrashFood
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1836333831
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1836333821}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97e4db337fea49c487fb97edb4a9646d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _foodPlacer: {fileID: 2074393082}
 --- !u!1 &1844431133
 GameObject:
   m_ObjectHideFlags: 0
@@ -16178,6 +16476,8 @@ GameObject:
   - component: {fileID: 1897173476}
   - component: {fileID: 1897173475}
   - component: {fileID: 1897173474}
+  - component: {fileID: 1897173480}
+  - component: {fileID: 1897173481}
   m_Layer: 0
   m_Name: Place2
   m_TagString: Untagged
@@ -16194,7 +16494,7 @@ RectTransform:
   m_GameObject: {fileID: 1897173471}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.8, y: 0.8, z: 1}
+  m_LocalScale: {x: 0.65, y: 0.65, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1500079866}
@@ -16204,7 +16504,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 434, y: -88}
+  m_AnchoredPosition: {x: 437, y: -78}
   m_SizeDelta: {x: 322, y: 256}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1897173473
@@ -16239,9 +16539,10 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1897173477}
-          m_TargetAssemblyTypeName: 
-          m_MethodName: TryTransferFood
+        - m_Target: {fileID: 1897173481}
+          m_TargetAssemblyTypeName: CookingPrototype.Kitchen.FoodTransferPlacerSolver,
+            Assembly-CSharp
+          m_MethodName: OnPointerUp
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -16251,9 +16552,9 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-        - m_Target: {fileID: 1897173475}
-          m_TargetAssemblyTypeName: 
-          m_MethodName: TryTrashFood
+        - m_Target: {fileID: 1897173480}
+          m_TargetAssemblyTypeName: EventSystem.DoubleClickEvent, Assembly-CSharp
+          m_MethodName: OnPointerUp
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -16359,6 +16660,47 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1897173471}
   m_CullTransparentMesh: 0
+--- !u!114 &1897173480
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1897173471}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9339d493571c4ec5993f7ecf1c39a33a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _maxDeltaTimeToTriggerInSeconds: 0.3
+  OnDoubleClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1897173475}
+        m_TargetAssemblyTypeName: CookingPrototype.Kitchen.FoodTrasher, Assembly-CSharp
+        m_MethodName: TryTrashFood
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1897173481
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1897173471}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97e4db337fea49c487fb97edb4a9646d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _foodPlacer: {fileID: 1376439837}
 --- !u!1 &1917964530
 GameObject:
   m_ObjectHideFlags: 0

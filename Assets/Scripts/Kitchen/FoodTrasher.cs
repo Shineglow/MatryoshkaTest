@@ -21,7 +21,8 @@ namespace CookingPrototype.Kitchen {
 		/// </summary>
 		[UsedImplicitly]
 		public void TryTrashFood() {
-			_place.FreePlace();
+			if ( _place.CurFood != null && _place.CurFood.CurStatus == Food.FoodStatus.Overcooked ) 
+				_place.FreePlace();
 		}
 	}
 }
