@@ -17,5 +17,10 @@ namespace CookingPrototype.Kitchen {
 				}
 			}
 		}
+		
+		[UsedImplicitly]
+		public void TryPlaceFoodAt(AbstractFoodPlace place) {
+			place.TryPlaceFood(new Food(FoodName));
+		}
 	}
 }
